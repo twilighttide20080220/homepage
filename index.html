@@ -1,100 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viyella</title>
-  <meta name="description" content="Viyella 的个人主页">
-  <style>
-    :root {
-      --bg: #0f1115;
-      --card: #171a21;
-      --text: #e6e8ee;
-      --muted: #8b93a7;
-      --accent: #4f8cff;
-      --border: #262b36;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      line-height: 1.7;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 3rem;
-      max-width: 560px;
-      width: 100%;
-    }
-    h1 {
-      font-size: 1.9rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-    .subtitle {
-      color: var(--accent);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-    .bio {
-      color: var(--muted);
-      font-size: 0.98rem;
-      margin-bottom: 2rem;
-    }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .links a {
-      color: var(--text);
-      text-decoration: none;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 0.45rem 1.1rem;
-      font-size: 0.9rem;
-      transition: all 0.15s ease;
-    }
-    .links a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-    footer {
-      margin-top: 2.5rem;
-      color: var(--muted);
-      font-size: 0.8rem;
-      opacity: 0.7;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Viyella 的个人站与任务工作空间。从研究、工具到文档，把目标整理清楚，让协作与交付可核对。工作台采用邀请制访问。">
+  <title>Viyella · 思考有序，交付有据</title>
+  <link rel="canonical" href="https://viyella0721.com/">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
 </head>
-<body>
-  <main class="card">
-    <h1>Viyella</h1>
-    <!-- 副标题：一句话定位自己，如「独立开发者 / 数字游民」 -->
-    <p class="subtitle">你好，世界。</p>
+<body class="viyella-site" data-theme="dark">
+  <a class="site-skip-link" href="#content">跳到主要内容</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-brand" href="#" aria-label="Viyella 首页"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="m7 10 13 23 13-23M13 10l7 12 7-12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 29h7m14 0h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>Viyella<small>PERSONAL SPACE</small></span></a>
+      <nav class="site-nav" aria-label="主页导航"><a href="#practice">所做之事</a><a href="#process">协作方式</a><a href="#workspace">工作空间</a></nav>
+      <div class="site-header-actions"><label class="site-sr-only" for="site-theme">外观主题</label><select id="site-theme" aria-label="外观主题"><option value="dark">深色</option><option value="light">浅色</option><option value="system">系统</option></select><a class="site-button site-button-small" href="https://ai.viyella0721.com/login">受邀登录 <span aria-hidden="true">↗</span></a></div>
+    </header>
+    <main id="content">
+      <section class="site-hero" aria-labelledby="hero-title">
+        <div class="site-hero-copy"><span class="site-eyebrow"><span class="site-kicker-line" aria-hidden="true"></span> IDEAS INTO SOMETHING TANGIBLE</span><p class="site-hello">你好，这里是 Viyella。</p><h1 id="hero-title">让想法有路径，<br>让交付<em>有据可循。</em></h1><p class="site-lead">一个安放思考、工具与实践的个人空间。<br class="site-desktop-break">也为明确的任务，留一个边界清楚的协作入口。</p><div class="site-hero-actions"><a class="site-button" href="#practice">看看所做之事 <span aria-hidden="true">↓</span></a><a class="site-text-link" href="https://ai.viyella0721.com/login">进入受邀工作台 <span aria-hidden="true">↗</span></a></div><p class="site-hero-note">私人任务不会出现在这张公开页面。工作台仅向受邀成员开放。</p></div>
+        <div class="site-hero-art" aria-hidden="true"><div class="site-orbit site-orbit-one"></div><div class="site-orbit site-orbit-two"></div><div class="site-orbit site-orbit-three"></div><div class="site-v-mark"><svg viewBox="0 0 240 260" fill="none"><path d="M34 58 120 218 206 58M75 58l45 84 45-84" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 210h43m102 0h43M120 25v18M120 234v14" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg></div><span class="site-art-label site-art-label-top">THINK CLEARLY.</span><span class="site-art-label site-art-label-bottom">MAKE DELIBERATELY.</span><span class="site-art-corner site-art-corner-tl"></span><span class="site-art-corner site-art-corner-br"></span></div>
+      </section>
+      <div class="site-principles" aria-label="工作原则"><span>清晰的输入</span><span aria-hidden="true">/</span><span>克制的工具</span><span aria-hidden="true">/</span><span>可核对的结果</span><a href="#workspace">认识这个工作空间 <span aria-hidden="true">↗</span></a></div>
 
-    <!-- 自我介绍：改成你自己的介绍 -->
-    <p class="bio">
-      这里是 viyella0721.com，一个刚上线的个人主页。
-      内容正在建设中，敬请期待。
-    </p>
+      <section id="practice" class="site-section" aria-labelledby="practice-title">
+        <div class="site-section-heading"><div><span class="site-eyebrow">01 / AREAS OF PRACTICE</span><h2 id="practice-title">从理解问题，到做出结果。</h2></div><p>关注三类工作，不把复杂度当作目的。<br>先确定目标，再选择合适的工具与表达。</p></div>
+        <div class="site-capabilities">
+          <article class="site-capability"><div class="site-card-top"><span class="site-card-index">01</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="m20 20 7 7M10 12h8m-8 4h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><span class="site-micro-label">RESEARCH & CLARITY</span><h3>研究与梳理</h3><p>把零散材料整理成问题、证据与结论。区分已知、推断和缺口，让下一步行动有所依据。</p><ul><li>资料理解与结构化整理</li><li>主题研究与来源核对</li><li>方案比较与决策说明</li></ul></article>
+          <article class="site-capability"><div class="site-card-top"><span class="site-card-index">02</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m11 8-7 8 7 8m10-16 7 8-7 8M18 5l-4 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="site-micro-label">TOOLS & SYSTEMS</span><h3>工具与构建</h3><p>围绕真实需求设计小而有效的工具。重视实现边界、可读性与验证，而不是堆叠未经确认的能力。</p><ul><li>轻量界面与实用脚本</li><li>代码阅读与问题分析</li><li>明确范围内的实现与测试</li></ul></article>
+          <article class="site-capability"><div class="site-card-top"><span class="site-card-index">03</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M9 4h11l5 5v19H9V4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 4v6h5M13 15h8m-8 5h8m-8 4h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><span class="site-micro-label">DOCUMENTS & EXPRESSION</span><h3>文档与表达</h3><p>让内容有结构，让表达服务于读者。忠于材料、标记不确定信息，交付可以继续编辑和使用的成果。</p><ul><li>复杂内容的清晰表达</li><li>报告、说明与文档整理</li><li>面向交付的格式与结构</li></ul></article>
+        </div>
+        <p class="site-section-note">这些是本站关注的工作方向，不是资历、客户或在线能力承诺。具体任务的工具、资源与权限，以实际工作台和审批为准。</p>
+      </section>
 
-    <!-- 链接区：把 # 换成你的真实链接，不需要的整行删掉 -->
-    <div class="links">
-      <a href="https://github.com/你的用户名" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:you@example.com">Email</a>
-      <a href="#" target="_blank" rel="noopener">Blog</a>
-    </div>
+      <section id="process" class="site-section site-process" aria-labelledby="process-title">
+        <div class="site-section-heading"><div><span class="site-eyebrow">02 / A DELIBERATE PROCESS</span><h2 id="process-title">好的协作，始于明确的边界。</h2></div><p>多 Agent 可以协作，授权不能含糊。<br>任务回执、运行许可与操作审批各有其意义。</p></div>
+        <ol class="site-steps"><li><span class="site-step-number">01</span><h3>交代目标</h3><p>写清问题、材料、限制与验收标准。公开检索主题由你单独选择，不默认披露私有内容。</p><span class="site-step-tag">明确输入</span></li><li><span class="site-step-number">02</span><h3>确认许可</h3><p>取得持久化回执，再由站主核对成员任务与输入。收到回执不代表任务已经开始运行。</p><span class="site-step-tag">独立授权</span></li><li><span class="site-step-number">03</span><h3>跟进执行</h3><p>通过真实事件了解状态。敏感操作须另行审批；没有数据时，不补造进度或费用。</p><span class="site-step-tag">过程可读</span></li><li><span class="site-step-number">04</span><h3>核对交付</h3><p>查看阶段结论与冻结的交付文件，逐个下载。保留任务编号与回执，让结果可追溯。</p><span class="site-step-tag">成果可取</span></li></ol>
+      </section>
 
-    <footer>© 2026 Viyella · Powered by GitHub Pages</footer>
-  </main>
+      <section id="workspace" class="site-section" aria-labelledby="workspace-title">
+        <div class="site-workspace"><div class="site-workspace-copy"><span class="site-eyebrow">03 / A PRIVATE PLACE TO WORK</span><span class="site-invite-badge">邀请制工作空间</span><h2 id="workspace-title">公开介绍，到此为止。<br>具体的任务，在私有空间继续。</h2><p>个人主页只介绍方向与协作方式，不展示任务内容。工作台内，站主可审核成员任务与附件，费用由站主承担；执行所需的输入可能发送给已配置的模型 API。“私有”不表示离线或绝不外发。</p><a class="site-button" href="https://ai.viyella0721.com/login">进入受邀工作台 <span aria-hidden="true">↗</span></a><p class="site-workspace-url">ai.viyella0721.com</p></div><div class="site-access-notes"><article><span aria-hidden="true">◇</span><div><h3>已有邀请？</h3><p>使用站主发给你的邀请链接，并以匹配的身份登录。邀请链接含一次性令牌，请勿公开转发。</p></div></article><article><span aria-hidden="true">⌁</span><div><h3>还没有邀请？</h3><p>目前不开放自助注册。请通过你与站主已有的联系渠道确认邀请；本站不提供未经核实的联系方式。</p></div></article><article><span aria-hidden="true">↳</span><div><h3>只想了解本站？</h3><p>继续浏览这张公开页面即可。这里不嵌入工作台，不加载私有数据，也不展示虚构项目或使用统计。</p></div></article></div></div>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="site-footer-brand" href="#">Viyella<span>思考有序，交付有据。</span></a><div><a href="#practice">所做之事</a><a href="#process">协作方式</a><a href="https://ai.viyella0721.com/login">受邀登录 <span aria-hidden="true">↗</span></a></div><p>保持清楚，认真完成。</p></footer>
+  </div>
 </body>
 </html>
