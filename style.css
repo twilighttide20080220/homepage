@@ -194,3 +194,15 @@
   .viyella-site :is(.site-capability, .site-workspace, .site-button, .site-invite-badge, .site-step-tag) { border: 1px solid CanvasText; }
   .viyella-site .site-hero-art { display: none; }
 }
+/* device adaptation 2026-11-02 */
+@media (pointer: coarse) {
+  .viyella-site .site-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0; }
+  .viyella-site .site-footer > div a { display: inline-flex; align-items: center; min-height: 44px; }
+  .viyella-site :is(.site-button, .site-text-link, select) { min-height: 44px; display: inline-flex; align-items: center; }
+  .viyella-site :is(.site-brand, .site-footer-brand) { display: inline-flex; align-items: center; min-height: 44px; }
+  .viyella-site .site-principles a { display: inline-flex; align-items: center; min-height: 44px; }
+}
+@media (max-width: 360px) {
+  .viyella-site .site-steps { grid-template-columns: minmax(0, 1fr); }
+  .viyella-site .site-steps li, .viyella-site .site-steps li + li { padding-left: 0; padding-right: 0; border-left: none; }
+}
